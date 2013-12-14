@@ -1,0 +1,28 @@
+<p>
+  <strong>İsim Soyisim:</strong>
+  <%= @post.name %>
+</p>
+ 
+<p>
+  <strong>Marka:</strong>
+  <%= @post.brand %>
+</p>
+
+<p>
+  <strong>Model:</strong>
+  <%= @post.model %>
+</p>
+
+<p>
+  <strong>Sorun:</strong>
+  <%= @post.problem %>
+</p>
+
+<p>
+  <strong>Durum:</strong>
+  <%= @post.result %>
+</p>
+
+<%= link_to 'Bu girdiyi değiştir', edit_post_path(@post) %><br>
+<%= link_to "Cihaz listesine dön", controller: "posts" %><br>
+<%= link_to 'Anasayfa', welcome_index_path %>

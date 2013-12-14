@@ -1,0 +1,4 @@
+<h1>Digital İletişime Hoşgeldiniz!</h1>
+<%= link_to "Cihaz listesi(Admin)", controller: "posts" %><br>
+<%= link_to 'New post', new_post_path %>
+
