@@ -35,7 +35,7 @@ end
   @post = Post.new(post_params)
  
   @post.save
-  redirect_to welcome_index_path
+  redirect_to static_pages_sent_path
  end
  
  private
