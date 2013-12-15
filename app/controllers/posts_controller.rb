@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  http_basic_authenticate_with name: "admin", password: "pass", except: [:create, :new]
+
   def new
   end
 
