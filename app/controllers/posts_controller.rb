@@ -42,6 +42,6 @@ end
  
  private
   def post_params
-    params.require(:post).permit(:name, :brand, :model, :problem, :result)
+    params.require(:post).permit(:name, :brand, :phone, :model, :problem, :result)
  end
 end
