@@ -1,4 +1,0 @@
-<h1>Girdiyi değiştir</h1>
-<%= render 'form' %>
-<%= link_to 'Anasayfa', welcome_index_path %><br>
-<%= link_to "Cihaz listesine dön", controller: "posts" %>

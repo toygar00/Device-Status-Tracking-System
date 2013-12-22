@@ -4,7 +4,7 @@ class CreatePosts < ActiveRecord::Migration
       t.string :name
       t.string :brand
       t.string :model
-      t.string :phone
+      t.string     :phone
       t.string :report_date
       t.string :username
       t.text :problem
