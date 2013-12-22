@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Dsts::Application.config.secret_key_base = '067b5e704daf932bf5af85afbf67cd18d28b85f7f57c3d6e1ae40466e27dd2752dcb1782e4efe7b1d2455b21b68be1229e84c298ee5209c48d0cd7ca189fd032'
+BasicAuth::Application.config.secret_key_base = '836d01fc9121d15e82ddb91e96041ea20e038b42fac746e4fcdd8bce2657383d4ded31dcd0b269a22abfd9523c435389034101a2425bda19dfda0566945cdca0'

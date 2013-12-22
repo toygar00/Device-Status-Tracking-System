@@ -1,9 +1,20 @@
-Dsts::Application.routes.draw do
+BasicAuth::Application.routes.draw do
+
+  root :to=>"home#index"
+
+  get "sign_in" => "authentication#sign_in"
+  get 'signed_out' => "authentication#signed_out"
+  get 'change_password' => "authentication#change_password"
+  get 'forgot_password' => "authentication#forgot_password"
+  get "new_user" => "authentication#new_user"
+  get "password_sent" => "authentication#password_sent"
+
+  get "account_settings" => "authentication#account_settings"
+
+  post "sign_in" => "authentication#login"
+  put "new_user" => "authentication#register"
+  put "account_settings" => "authentication#set_account_info"
+
   get "static_pages/sent"
-  get "welcome/index"
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
   resources :posts
-  # You can have the root of your site routed with "root"
-  root 'welcome#index'
 end

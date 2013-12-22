@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Dsts::Application.load_tasks
+BasicAuth::Application.load_tasks
