@@ -1,33 +1,33 @@
 <h1>Arıza bildirim formu</h1>
 <%= form_for :post, url: posts_path do |f| %>
-<p>
+    <p>
     <p>İsim - Soyisim</p>
     <%= f.text_field :name %>
-  </p>
+    </p>
 
-  <p>
+    <p>
     <p>Tel No</p>
     <%= f.text_field :phone %>
-  </p>
- 
-  <p>
+    </p>
+
+    <p>
     <p>Marka</p>
     <%= f.text_field :brand %>
-  </p>
+    </p>
 
-  <p>
-    <%= f.label :model %><br>
-    <%= f.text_field :model %>
-  </p>
+    <p>
+      <%= f.label :model %><br>
+      <%= f.text_field :model %>
+    </p>
 
-  <p>
-    <%= f.label :problem %><br>
-    <%= f.text_area :problem %>
-  </p>
- 
-  <p>
-    <%= f.submit "Gönder" %>
-  </p>
+    <p>
+      <%= f.label :problem %><br>
+      <%= f.text_area :problem %>
+    </p>
+
+    <p>
+      <%= f.submit "Gönder" %>
+    </p>
 <% end %>
 
 <%= link_to 'Anasayfa', :root %>
