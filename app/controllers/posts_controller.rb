@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  http_basic_authenticate_with name: "admin", password: "pass", except: [:create, :new]
+  http_basic_authenticate_with name: "admin", password: "pass", except: [:create, :new, :user_posts]
   before_filter :authenticate_user, :only => [:new, :create,:user_posts]
 
   def new
