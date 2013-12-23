@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user
     if current_user.nil?
-      flash[:error] = 'Bu sayfaya giris.'
+      flash[:error] = 'Bu sayfaya giris yapmak icin uye olmalisiniz.'
       redirect_to :root
     end
   end
