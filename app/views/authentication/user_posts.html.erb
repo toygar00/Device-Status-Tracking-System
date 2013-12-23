@@ -1,0 +1,13 @@
+<% @posts.each do |post| %>
+    <tr>
+      <td><%= post.name %></td>
+      <td><%= post.brand %></td>
+      <td><%= post.model %></td>
+      <td><%= post.problem %></td>
+      <td><%= post.result %></td>
+      <td><%= link_to 'Göster', post %></td>
+      <td><%= link_to 'Değiştir', edit_post_path(post) %></td>
+      <td><%= link_to 'Sil', post_path(post),
+                      method: :delete, data: { confirm: 'Emin misiniz?' } %></td>
+    </tr>
+<% end %>

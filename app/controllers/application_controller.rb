@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user
     if current_user.nil?
-      flash[:error] = 'You must be signed in to view that page.'
+      flash[:error] = 'Bu sayfaya giris.'
       redirect_to :root
     end
   end

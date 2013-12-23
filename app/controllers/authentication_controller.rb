@@ -7,7 +7,8 @@ class AuthenticationController < ApplicationController
 
   def signed_out
     session[:user_id] = nil
-    flash[:notice] = "You have been signed out."
+    flash[:notice] = "Cikis yaptiniz"
+    redirect_to :root
   end
 
   def new_user
@@ -27,7 +28,7 @@ class AuthenticationController < ApplicationController
     # verify
     if @user.nil?
       @user = current_user
-      @user.errors[:password] = "Password is incorrect."
+      @user.errors[:password] = "Girdiginiz sifre yanlis."
       render :action => "account_settings"
     else
       # update the user with any new username and email
@@ -40,7 +41,7 @@ class AuthenticationController < ApplicationController
         # If there is a new_password value, then we need to update the password.
         @user.password = @user.new_password unless @user.new_password.nil? || @user.new_password.empty?
         @user.save
-        flash[:notice] = 'Account settings have been changed.'
+        flash[:notice] = 'Hesap ayarlariniz degistirildi.'
         redirect_to :root
       else
         render :action => "account_settings"
@@ -75,14 +76,18 @@ class AuthenticationController < ApplicationController
 
     if user
       session[:user_id] = user.id
-      flash[:notice] = 'Welcome ' + user.username.to_s + "."
+      flash[:notice] = 'Hosgeldin ' + user.username.to_s + "."
       redirect_to :root
     else
       @user = User.new
-      flash.now[:error] = 'Unknown user. Please check your username and password.'
+      flash.now[:error] = 'Girdiginiz kullanici adi ve ya sifre yanlis.'
       render :action => "sign_in"
     end
 
+    def user_posts
+      @user = current_user
+      @posts = Post.all
+    end
 
 
   end

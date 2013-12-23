@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :postses
+  has_many :posts
 
   attr_accessible :email, :username, :password, :password_confirmation, :new_password, :new_password_confirmation, :remember_me
   attr_accessor :password, :new_password, :previous_email, :previous_username, :remember_me
