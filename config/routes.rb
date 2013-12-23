@@ -8,7 +8,7 @@ BasicAuth::Application.routes.draw do
   get 'forgot_password' => "authentication#forgot_password"
   get "new_user" => "authentication#new_user"
   get "password_sent" => "authentication#password_sent"
-  get "user_posts" => "authentication#user_posts"
+  get "user_posts" => "posts#user_posts"
 
   get "account_settings" => "authentication#account_settings"
 

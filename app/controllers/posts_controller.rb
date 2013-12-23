@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   http_basic_authenticate_with name: "admin", password: "pass", except: [:create, :new]
-  before_filter :authenticate_user, :only => [:new, :create]
+  before_filter :authenticate_user, :only => [:new, :create,:user_posts]
 
   def new
   end
@@ -43,8 +43,12 @@ class PostsController < ApplicationController
     redirect_to static_pages_sent_path
   end
 
+  def user_posts
+    @posts = Post.where("user_id = ?", current_user.id)
+  end
+
   private
   def post_params
-    params.require(:post).permit(:name, :brand, :phone, :model, :problem, :result, :user_id)
+    params.require(:post).permit(:name, :brand, :phone, :model, :problem, :result, :user_id, :username)
   end
 end

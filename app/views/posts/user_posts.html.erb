@@ -1,0 +1,25 @@
+<h1>Müşteri Cihaz Listesi</h1>
+
+<table>
+  <tr>
+    <th>İsim - Soyisim</th>
+    <th>Marka</th>
+    <th>Model</th>
+    <th>Sorun</th>
+    <th>Durum</th>
+  </tr>
+
+  <% @posts.each do |post|  %>
+      <tr>
+        <td><%= post.name %></td>
+        <td><%= post.brand %></td>
+        <td><%= post.model %></td>
+        <td><%= post.problem %></td>
+        <td><%= post.result %></td>
+      </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Anasayfa', :root %>
+
+

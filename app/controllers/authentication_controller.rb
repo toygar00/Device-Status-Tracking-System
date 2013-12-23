@@ -83,12 +83,5 @@ class AuthenticationController < ApplicationController
       flash.now[:error] = 'Girdiginiz kullanici adi ve ya sifre yanlis.'
       render :action => "sign_in"
     end
-
-    def user_posts
-      @user = current_user
-      @posts = Post.all
-    end
-
-
   end
 end
