@@ -12,16 +12,18 @@
     <%= content_tag :div, msg, :id => "flash_#{name}" %>
 <% end %>
 
-<p>
+
   <% if current_user %>
-      <%= current_user.username %> olarak giriş yaptınız.
+      <br>
+    <div margin-left="20px"><%= current_user.username %> olarak giriş yaptınız. </div>
+    <div>
       <%= link_to "Çıkış Yap", signed_out_path %>
       <%= link_to "Hesap Ayarları", account_settings_path %>
   <% else %>
       <%= link_to "Üye Ol", new_user_path %> or
-      <%= link_to "Giriş Yap", sign_in_path %>
+      <%= link_to "GirisYap", sign_in_path %>
+    </div>
   <% end %>
-</p>
 
 
 <%= yield %>

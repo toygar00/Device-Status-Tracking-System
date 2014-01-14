@@ -11,3 +11,20 @@
     margin-bottom: 10px;
     background-color: #A3B15A;
 }
+
+body {
+    background-color:#d0e4fe;
+    font-family:"Times New Roman";
+    font-size:20px;
+}
+
+.login {
+    margin-left:900px;
+    width:70%;
+
+}
+
+
+.isim {
+    margin-left: 20px;
+}

@@ -1,27 +1,30 @@
-<p>Sign Up</p>
+<h1>Üye Olmak için aşağıdaki formları doldurunuz</h1>
+
+<p>Üye ol</p>
 <%= form_for @user, :as => :user, :url => new_user_path, :method => :put do |f| %>
     <p>
-      <%= f.label 'username:' %><br/>
+      <%= f.label 'Kullanıcı adı:' %><br/>
       <%= f.text_field :username %>
       <%= show_field_error(@user, :username) %>
     </p>
     <p>
-      <%= f.label 'email:' %><br/>
+      <%= f.label 'E-mail:' %><br/>
       <%= f.text_field :email %>
       <%= show_field_error(@user, :email) %>
     </p>
     <p>
-      <%= f.label 'password:' %><br/>
+      <%= f.label 'Şifre:' %><br/>
       <%= f.password_field :password %>
       <%= show_field_error(@user, :password) %>
     </p>
     <p>
-      <%= f.label 'password confirmation:' %><br/>
+      <%= f.label 'Şifre doğrulama:' %><br/>
       <%= f.password_field :password_confirmation %>
       <%= show_field_error(@user, :password_confirmation) %>
     </p>
     <p>
-      <%= f.submit 'Sign Up' %>&nbsp;&nbsp;&nbsp;
-      <%= f.submit 'Clear Form', :type => 'reset' %>
+      <%= f.submit 'Üye ol' %>&nbsp;&nbsp;&nbsp;
+      <%= f.submit 'Formu temizle', :type => 'reset' %>
     </p>
+    <%= link_to 'Anasayfa', :root %><br>
 <% end %>
